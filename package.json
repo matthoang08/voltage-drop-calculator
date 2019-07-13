@@ -1,0 +1,12 @@
+{
+  "name": "voltage-drop-calculator",
+  "version": "0.0.1",
+  "description": "Web application that calculates voltage drop.",
+  "main": "index.js",
+  "repository": "https://github.com/matthoang08/voltage-drop-calculator",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Hoang",
+  "license": "ISC"
+}
