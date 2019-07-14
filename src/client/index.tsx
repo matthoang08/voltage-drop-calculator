@@ -1,9 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Counter } from '../containers/Counter';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(
-    <Counter />,
-    document.getElementById('app')
-);
+import { VoltageDropCalculator } from '../components/VoltageDropCalculator';
+
+ReactDOM.render(<VoltageDropCalculator />, document.getElementById('app'));

@@ -1,15 +1,13 @@
 import * as React from 'react';
 // import React, { Component } from 'react';
 
-export interface CounterProps {
-}
+export interface CounterProps {}
 
 export interface CounterState {
   counter: number;
 }
 
 export class Counter extends React.Component<CounterProps, CounterState> {
-
   constructor(props: CounterProps) {
     super(props);
     this.state = { counter: 0 };

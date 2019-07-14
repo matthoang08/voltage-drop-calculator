@@ -6,14 +6,9 @@ import middleware from 'webpack-dev-middleware';
 
 import { Counter } from '../containers/Counter';
 import { html } from './html';
-
-// const webpack = require('webpack');
-// const middleware = require('webpack-dev-middleware');
 import { config } from '../../webpack.config';
-// const webpackConfig = require('../../webpack.config');
-// config.watch = true;
 
-class App {
+class ExpressApp {
   express: express.Express;
 
   constructor() {
@@ -25,9 +20,11 @@ class App {
   private mountMiddleware(): void {
     console.log('mounting middleware...');
     const compiler = webpack(config);
-    this.express.use(middleware(compiler, {
-      publicPath: '/'
-    }));
+    this.express.use(
+      middleware(compiler, {
+        publicPath: '/',
+      })
+    );
     this.express.use(require('webpack-hot-middleware')(compiler));
   }
 
@@ -47,4 +44,4 @@ class App {
   }
 }
 
-export default new App().express;
+export const App = new ExpressApp().express;

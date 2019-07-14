@@ -12,7 +12,8 @@
   "rules": {
       "import-name": false,
       "eofline": false,
-      "trailing-comma": false
+      "trailing-comma": false,
+      "variable-name": false
   },
   "rulesDirectory": []
 }
