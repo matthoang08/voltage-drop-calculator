@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "gts/tslint.json",
+    "tslint-config-airbnb"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "**/*.json"
+    ]
+  },
+  "jsRules": {},
+  "rules": {
+      "import-name": false,
+      "eofline": false,
+      "trailing-comma": false
+  },
+  "rulesDirectory": []
+}

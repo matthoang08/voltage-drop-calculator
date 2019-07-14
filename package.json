@@ -2,11 +2,48 @@
   "name": "voltage-drop-calculator",
   "version": "0.0.1",
   "description": "Web application that calculates voltage drop.",
-  "main": "index.js",
+  "main": "dist/server.js",
   "repository": "https://github.com/matthoang08/voltage-drop-calculator",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc -p .",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run check",
+    "dev": "nodemon ./dist/src/server/index.js --env.NODE_ENV=development",
+    "build": "webpack --env.platform=server",
+    "start:dev": "webpack-dev-server --env.NODE_ENV=development"
   },
   "author": "Matt Hoang",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "express": "^4.17.1",
+    "gts": "^1.0.0",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^8.3.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "~3.4.0"
+  },
+  "dependencies": {
+    "@types/node": "^12.6.2",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "@types/webpack": "^4.4.35",
+    "@types/webpack-dev-middleware": "^2.0.3",
+    "@types/webpack-node-externals": "^1.6.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^1.7.2"
+  }
 }
