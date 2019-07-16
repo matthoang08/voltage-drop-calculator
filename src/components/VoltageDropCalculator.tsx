@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import From from 'react-bootstrap/Form';
+import Form from 'react-bootstrap/Form';
 
 export const VoltageDropCalculator: React.FunctionComponent = () => {
   return (
@@ -25,8 +27,21 @@ export const VoltageDropCalculator: React.FunctionComponent = () => {
           <Col>Col2</Col>
         </Row>
         <Row>
-          <Col>Col3</Col>
-          <Col>Col4</Col>
+          <Form>
+            <Form.Group controlId="formWireType">
+              <Form.Label>Wire Type</Form.Label>
+              <Form.Control as="select">
+                <option>Copper</option>
+                <option>Aluminum</option>
+              </Form.Control>
+            </Form.Group>
+            <Form.Group controlId="formPhaseType">
+              <Form.Label>Phase Type</Form.Label>
+              <Form.Check type="radio" id="phase-check" label="Single-Phase" />
+              <Form.Check type="radio" id="phase-check" label="Three-Phase" />
+            </Form.Group>
+            <Button variant="primary" type="submit">Calculate</Button>
+          </Form>
         </Row>
       </Container>
     </div>
