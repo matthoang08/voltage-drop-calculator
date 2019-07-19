@@ -39,7 +39,9 @@ export const VoltageDropCalculator: React.FunctionComponent = () => {
               <Form.Check type="radio" id="phase-check" label="Single-Phase" />
               <Form.Check type="radio" id="phase-check" label="Three-Phase" />
             </Form.Group>
-            <Button variant="primary" type="submit">Calculate</Button>
+            <Button variant="primary" type="submit">
+              Calculate
+            </Button>
           </Form>
         </Row>
       </Container>
