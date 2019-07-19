@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import From from 'react-bootstrap/Form';
 import Form from 'react-bootstrap/Form';
 
 export const VoltageDropCalculator: React.FunctionComponent = () => {
