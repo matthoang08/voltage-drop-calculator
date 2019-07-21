@@ -30,17 +30,23 @@ class ExpressApp {
 
   private mountRoutes(): void {
     const router = express.Router();
-    router.get('/', (req, res) => {
-      res.json({
-        message: 'Hello World!1',
-      });
-    });
     router.use(express.static('dist'));
-    router.get('/html', (req, res) => {
+    router.get('/', (req, res) => {
       const body = renderToString(React.createElement(Counter));
       res.send(html({ body }));
     });
     this.express.use('/', router);
+    this.express.use('/api', this.mountApis());
+  }
+
+  private mountApis(): express.Router {
+    const router = express.Router();
+    router.get('/hello', (req, res) => {
+      res.json({
+        message: 'Hello World!1',
+      });
+    });
+    return router;
   }
 }
 
