@@ -29,7 +29,12 @@ export const config: webpack.Configuration = {
   // assume a corresponding global variable exists and use that instead.
   // This is important because it allows us to avoid bundling all of our
   // dependencies, which allows browsers to cache those libraries between builds.
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.ProvidePlugin({
+    //   react: 'React'
+    // })
+  ],
   entry: {
     // server: './src/server/index.ts',
     client: './src/client/index.tsx',

@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server';
 import webpack from 'webpack';
 import middleware from 'webpack-dev-middleware';
 
-import { Counter } from '../containers/Counter';
+import { VoltageDropCalculator } from '../components/VoltageDropCalculator';
 import { html } from './html';
 import { config } from '../../webpack.config';
 
@@ -32,7 +32,7 @@ class ExpressApp {
     const router = express.Router();
     router.use(express.static('dist'));
     router.get('/', (req, res) => {
-      const body = renderToString(React.createElement(Counter));
+      const body = renderToString(React.createElement(VoltageDropCalculator));
       res.send(html({ body }));
     });
     this.express.use('/', router);
