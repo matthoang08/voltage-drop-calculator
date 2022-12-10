@@ -33,7 +33,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "chai": "^4.2.0",
     "css-loader": "^3.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "gts": "^1.1.0",
     "husky": "^3.0.3",
     "mocha": "^6.2.0",
